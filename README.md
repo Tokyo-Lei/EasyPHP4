@@ -1,4 +1,4 @@
-# EasyPHP4 基于composer依赖开发的第四代PHP框架
+# 基于composer依赖第四代PHP MVC框架
 
 
 
