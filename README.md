@@ -1,7 +1,7 @@
 # 基于composer依赖第四代PHP MVC框架
 
 
-![](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png)
+![](./logo.png)
 
 EasyPHP Framework 基于composer依赖开发的第四代PHP框架
 
@@ -25,7 +25,7 @@ EasyPHP Framework 基于composer依赖开发的第四代PHP框架
 ## 目录结构
 ```php
 App		
-   |-	home
+   |-home
        |-controller
            |-HomeController.php
        |- model
