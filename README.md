@@ -1,8 +1,7 @@
 # 基于composer依赖第四代PHP MVC框架
 
 
-
-<img src="https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png" width = "200"/>
+![](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png/w/200)
 
 EasyPHP Framework 基于composer依赖开发的第四代PHP框架
 
