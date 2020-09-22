@@ -2,7 +2,8 @@
 
 
 
-<img src="https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png" alt="logo" style="zoom: 33%;" />
+![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png)
+
 
 
 EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过多年打磨和积累经验，此框架已经成熟。
