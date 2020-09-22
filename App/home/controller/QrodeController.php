@@ -8,11 +8,9 @@ use Endroid\QrCode\QrCode;
 class QrodeController{
 
     
-  
-
         public function index(){
 
-            $qrCode = new QrCode('法克鱿！你不缴费怎么阅读文章？');
+            $qrCode = new QrCode('恭喜你扫码成功！');
             header('Content-Type: '.$qrCode->getContentType());
             echo $qrCode->writeString();
          

@@ -12,6 +12,8 @@ Route::get('/phpinit', function() {
 Route::get('/code', 'App\Home\Controller\QrodeController@index');
 
 
+Route::get('/captcha', 'App\Home\Member\Captcha@index');
+
 Route::get('/login', 'App\Home\Member\LoginController@index');
 Route::get('/login2', 'App\Home\Member\LoginController@login');
 

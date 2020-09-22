@@ -10,6 +10,13 @@ class Core{
    public function __construct()
    {
 
+        if (version_compare(phpversion(), '7.0', '<')) {
+            die('<h1>No! :(</h1><p>为了兼容更好使用，必须在PHP7.0以上版本开发！</p>');
+        }
+
+
+
+
         //  App根目录
         define('APP_PATH',str_replace('\\','/',realpath(dirname(__FILE__).'/'))."/");
         // 根目录
@@ -22,6 +29,8 @@ class Core{
          $whoops = new \Whoops\Run;
          $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
          $whoops->register();
+
+        
         
    }
 
