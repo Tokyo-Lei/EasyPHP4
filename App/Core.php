@@ -60,12 +60,14 @@ class Core{
          //加载数据库配置
         require  APP_PATH .'Config/Mysql.php'; 
         return $_DB = New medoo($Config['DB']);
-
-
      }
          
      
-
+     public static function _Auth(){
+        //加载auth数据
+       $_auth_path = require  APP_PATH .'Config/Auth.php'; 
+       return $_auth_path;
+    }
 
 }
 

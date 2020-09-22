@@ -6,7 +6,7 @@
         "bang/validate": "^1.0",
         "endroid/qr-code": "^3.9",
         "filp/whoops": "^2.7",
-        "phpauth/phpauth": "dev-master"
+        "huangsen/think5.1-auth": "dev-master"
     },
     
     "autoload":{
