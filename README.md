@@ -1,7 +1,7 @@
 # 基于composer依赖第四代PHP MVC框架
 
 
-<img src="E:\easyphp4\EasyPHP4\EasyPHP4\logo.png" alt="logo" style="zoom: 33%;" />
+<img src="logo.png" alt="logo" style="zoom: 33%;" />
 
 EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过多年打磨和积累经验，此框架已经成熟。
 
