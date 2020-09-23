@@ -19,8 +19,9 @@ EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过�
 
 
 PHP：7.0以上
-Composer：支持2.0RC-1版
-框架以PSR-4引用方式
+Composer：2.0RC-1版
+以PSR-4引用方式
+
 
 
 
