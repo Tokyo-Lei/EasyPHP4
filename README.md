@@ -56,13 +56,13 @@ vendor
    | -
 ```
 
-## 第三方
+## 第三方类库
 
-- Twig   
-- medoo
-- macaw
-- validate
-- whoops
-  
+- Twig      模板引擎
+- medoo     数据库框架
+- macaw     路由
+- validate  Thinkphp验证
+- whoops    错误提示
+- monolog   日志
 
 正在开发中...

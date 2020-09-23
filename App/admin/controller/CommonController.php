@@ -14,7 +14,7 @@ class  CommonController{
         $loader = new \Twig\Loader\FilesystemLoader(APP_PATH.'admin/view');
         $this->templateEngine = new \Twig\Environment($loader,[
             'debug'=>true,
-            'cache' => APP_PATH.'./admin/Cache',
+            'cache' => APP_PATH.'./admin/cache',
             'auto_reload' => true,  //根据文件更新时间，自动更新缓存
         ]);
         $this->templateEngine->addFilter(new \Twig\TwigFilter('url', function ($path){

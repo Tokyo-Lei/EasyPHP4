@@ -7,14 +7,15 @@
         "noahbuscher/macaw": "dev-master",
         "bang/validate": "^1.0",
         "endroid/qr-code": "^3.9",
-        "filp/whoops": "^2.7"
+        "filp/whoops": "^2.7",
+        "monolog/monolog": "^2.1"
     },
     
     "autoload":{
         "psr-4": {
             "App\\": "App"
         },
-        "files":["App/Lib/auth/auth.php"]
+        "files":["App/library/auth/auth.php"]
          
    }
 }
