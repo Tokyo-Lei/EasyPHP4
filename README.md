@@ -1,4 +1,4 @@
-# 基于composer依赖第四代PHP MVC框架
+# EasyPHP4
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过多年打磨和积累经验，此框架已经成熟。
+EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！经过多年打磨积累经验，此框架已经成熟。会孵生对各个应用场景，比如：用户中心、博客、文章CMS等。
 
 [![](https://img.shields.io/badge/version-4.0.0-green.svg)](https://img.shields.io/badge/version-4.0.0-green.svg)
 [![](https://img.shields.io/badge/php-7+-brightgreen.svg)](https://img.shields.io/badge/php-7+-brightgreen.svg)
@@ -18,10 +18,10 @@ EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过�
 ## 运行环境
 
 
-- PHP：7.0以上
-- Composer：2.0RC-1版
-- 以PSR-4引用方式
-- 后台风格基于bootswatch的litera风格
+- PHP：7.0 以上
+- Composer：2.0RC-1
+- PSR标准：PSR-4
+- 后台风格基于bootswatch litera
 
 
 
@@ -29,13 +29,14 @@ EasyPHP Framework 4 是基于composer依赖开发的第四代PHP框架！经过�
 
 - 2020年9月15日 准备开发新框架
 - 2020年9月21日 完成主体架构
-- 2020年9月22日  新增whoops、ThinkPHP-auth、qr-code
+- 2020年9月22日 新增whoops、qr-code
+- 2020年9月23日 新增后台、删除ThinkPHP-auth、新增Auth库、修改核心
 
-## 框架使用
+## 协议说明
 
 - 本代码开源遵循MIT协议。
-- 支持PHP7.X以上版本。
-- 支持Windows和Liunx平台。
+- 部分代码来源第三方
+
 
 ## 目录结构
 ```php
@@ -52,18 +53,16 @@ App
 Public
    | - index.php 
 vendor
+   | -
 ```
 
 ## 第三方
 
 - Twig   
-
 - medoo
-
 - macaw
-
 - validate
-
+- whoops
   
 
-  正在开发中...
+正在开发中...
