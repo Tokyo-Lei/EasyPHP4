@@ -41,7 +41,7 @@ Route::error(function() {
 
 
 // admin
-Route::get('/admin.html', 'App\admin\controller\index\IndexController@index');
+Route::get('/admin\/', 'App\admin\controller\index\IndexController@index');
 Route::get('/admin/user', 'App\admin\controller\user\UserController@index');
 
 
