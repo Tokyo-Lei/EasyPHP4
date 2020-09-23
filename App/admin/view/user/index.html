@@ -1,3 +1,26 @@
 {{ include('/include/head.html') }}
-后台用户管理系统
+<div class="container">
+    <table class="table mt-5">
+        <thead>
+        <tr class="table-dark">
+            <th scope="col">编号</th>
+            <th scope="col">用户名</th>
+            <th scope="col">- </th>
+            <th scope="col">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for value in user %}
+        <tr>
+            <th scope="row">{{ value['id'] }}</th>
+            <td>{{ value['username'] }}</td>
+            <td> - </td>
+            <td><button type="button" class="btn btn-primary">设置</button>  <button type="button" class="btn btn-danger">删除</button> </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table> 
+</div>
+
+
 {{ include('include/footer.html') }}

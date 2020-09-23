@@ -10,11 +10,11 @@ class UserController extends CommonController{
 
    public function index(){
 
-      $data = UserModel::select($this->_medoo_config(),'think_user','*');
+      $user = UserModel::select($this->_medoo_config(),'think_user','*');
       
 
       echo $this->render('user/index.html',[
-         'data' => $data,
+         'user' => $user,
          'PUBLIC_ADMIN' => PUBLIC_ADMIN
       ]);
    }
