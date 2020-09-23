@@ -2,7 +2,7 @@
 
 
 
-![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/logo.png)
+![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/Public/Home/img/logo.png)
 
 
 
@@ -41,12 +41,12 @@ EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！经过多
 ## 目录结构
 ```php
 App		
-   |-	home
-       |-controller
-           |-HomeController.php
-       |- model
-       |- templates
-       |- member 
+   |-	home                         //前台目录
+         |-controller
+             |-HomeController.php
+         |- model
+         |- templates
+         |- member 
    |- config
    |-	Core.php 
    |- Router.php
