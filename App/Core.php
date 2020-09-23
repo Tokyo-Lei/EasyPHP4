@@ -71,9 +71,9 @@ class Core{
         $baseDir=str_replace(basename($_SERVER['SCRIPT_NAME']), '',$_SERVER['SCRIPT_NAME']);
         $baseUrl='http://' . $_SERVER['HTTP_HOST'] . $baseDir;
         define('BASE_URL', $baseUrl);
-        
-        
-     
+        define('PUBLIC_ADMIN', BASE_URL.'Admin');
+        define('PUBLIC_HOME', BASE_URL.'Home');
+    
         
         
         //加载路由

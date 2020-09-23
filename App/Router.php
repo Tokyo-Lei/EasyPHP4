@@ -9,8 +9,6 @@ Route::get('/', 'App\Home\Controller\HomeController@main');
 Route::get('/login', 'App\Home\Member\Login@index');
 
 
-
-
 Route::get('/phpinit', function() {
    phpinfo();
 });
@@ -32,6 +30,24 @@ Route::get('/about', function() {
 Route::error(function() {
     echo '404 !';
 });
+
+
+
+
+
+
+
+
+
+
+// admin
+Route::get('/admin.html', 'App\admin\controller\index\IndexController@index');
+Route::get('/admin/user', 'App\admin\controller\user\UserController@index');
+
+
+
+
+
 
 Route::dispatch();
 

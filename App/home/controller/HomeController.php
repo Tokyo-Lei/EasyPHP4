@@ -17,7 +17,8 @@ class HomeController extends CommonController{
             $data = user::user_select($this->_medoo_config(),'proc','*');
         
             echo $this->render('index.html',[
-                 'data' => $data
+                 'data' => $data,
+                 'PUBLIC_HOME' => PUBLIC_HOME
             ]);
         }
     }
