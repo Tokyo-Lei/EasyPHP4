@@ -7,6 +7,16 @@ use Medoo\Medoo;
 class Core{
 
    
+
+
+    private static $app;
+
+
+
+
+
+
+
    public function __construct()
    {
 
@@ -31,10 +41,28 @@ class Core{
          $whoops->register();
 
         
+         //config 对应加载目录
+          define('PHP_CONFIG_AUTO_PATH',APP_PATH.'config/');
+          define('PHP_CONFIG_PATH',APP_PATH.'config/');
+
         
+      
    }
 
 
+
+   public static function Auth_Config($key = null) {
+
+    if (self::$app == null) {
+        self::$app = require APP_PATH . 'config/Auth.php';
+    }
+
+    if (!is_null($key)) {
+        return array_key_exists($key, self::$app) ? self::$app[$key] : null;
+    }
+
+    return self::$app;
+}
 
 
 

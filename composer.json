@@ -1,4 +1,6 @@
 {
+    "name": "tokyo-lei/easyphp4",
+    "description": "EasyPHP Framework",
     "require": {
         "twig/twig": "3.0",
         "catfan/medoo": "^1.7",
@@ -12,7 +14,8 @@
     "autoload":{
         "psr-4": {
             "App\\": "App"
-        }
+        },
+        "files":["App/Lib/auth/auth.php"]
          
    }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cfbdf8671daaf4de82a7d5ec3c2a68d",
+    "content-hash": "c273755001984465b9b79c86af0811db",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -316,89 +316,6 @@
                 "whoops"
             ],
             "time": "2020-06-14T09:00:00+00:00"
-        },
-        {
-            "name": "firebase/php-jwt",
-            "version": "v5.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.8 <=9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "keywords": [
-                "jwt",
-                "php"
-            ],
-            "time": "2020-03-25T18:49:23+00:00"
-        },
-        {
-            "name": "huangsen/think5.1-auth",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/h274799010/thinkphp5.1-auth.git",
-                "reference": "08e43d06d30c62c32c787119809aeddf28d7496b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/h274799010/thinkphp5.1-auth/zipball/08e43d06d30c62c32c787119809aeddf28d7496b",
-                "reference": "08e43d06d30c62c32c787119809aeddf28d7496b",
-                "shasum": ""
-            },
-            "require": {
-                "firebase/php-jwt": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "huangsen\\auth\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "gold",
-                    "email": "gold@qq.com"
-                }
-            ],
-            "description": "thinkphp5.1 Permission verification only to myself",
-            "time": "2018-12-20T09:28:33+00:00"
         },
         {
             "name": "khanamiryan/qrcode-detector-decoder",
@@ -1303,8 +1220,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "noahbuscher/macaw": 20,
-        "huangsen/think5.1-auth": 20
+        "noahbuscher/macaw": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -1,7 +1,7 @@
 <?php
 
-[
-    'auth'  => [
+return [
+ 
             'auth_on' => true, // 权限开关
             'auth_cache' => false, //是否开启缓存
             'auth_key' => '_auth_', // 数据缓存的key
@@ -19,6 +19,8 @@
             //登录用户不需要验证的
             'allow_visit' => [
                 '/file/upload'
-            ]
-    ]
+            ],
+            //默认登陆页面
+            'login_path' => 'login/login',
+ 
 ];
