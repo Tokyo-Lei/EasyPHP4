@@ -1,11 +1,23 @@
 {{ include('/include/head.html') }}
+
+
+
 <div class="container">
+    
+<div class="row  mt-5">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h2>管理角色</h2>
+      </div>
+      <button type="button" class="btn btn-success mt-3" onclick="location.href='/admin/user_group_add'">新增角色</button>
+    </div>
+  </div>
     <table class="table mt-5">
         <thead>
         <tr class="table-dark">
             <th scope="col">编号</th>
             <th scope="col">用户名</th>
-            <th scope="col">- </th>
+            <th scope="col">状态 </th>
             <th scope="col">操作</th>
         </tr>
         </thead>
@@ -13,8 +25,13 @@
         {% for value in user %}
         <tr>
             <th scope="row">{{ value['id'] }}</th>
-            <td>{{ value['username'] }}</td>
-            <td> - </td>
+            <td>{{ value['title'] }}</td>
+            <td> 
+            {% if value['status'] == 1 %}
+                     正常使用
+            {% else %}
+                     禁用
+            {% endif %} </td>
             <td><button type="button" class="btn btn-primary">设置</button>  <button type="button" class="btn btn-danger">删除</button> </td>
         </tr>
         {% endfor %}

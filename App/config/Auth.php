@@ -2,14 +2,14 @@
 
 return [
  
-            'auth_on' => true, // 权限开关
-            'auth_cache' => false, //是否开启缓存
-            'auth_key' => '_auth_', // 数据缓存的key
-            'auth_rule' => 'user_auth_rule', // 权限规则表
-            'role' => 'user_auth_role', // 角色表
-            'role_user' => 'user_role_user', // 用户角色对应表
-            'users' => 'user', // 用户信息表
-            'users_auth_fields' => '',//用户需要验证的规则表达式字段 空代表所有用户字段
+            'auth_on'           =>  true, // 认证开关
+            'auth_type'         =>  1,    // 认证方式，1为实时认证；2为登录认证。
+            'auth_group'        =>  'think_auth_group',        // 用户组数据表名
+            'auth_group_access' =>  'think_auth_group_access', // 用户-用户组关系表
+            'auth_rule'         =>  'think_auth_rule',         // 权限规则表
+            'auth_user'         =>  'think_user',            // 用户信息表
+            'auth_user_id_field'=>  'id', // 用户表ID字段名
+            'administrator'     =>  [],   // 超级管理员列表
 
             //不需要登录的
             'no_need_login_url' => [
