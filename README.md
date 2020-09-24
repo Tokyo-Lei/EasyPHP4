@@ -30,6 +30,7 @@ EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！多层模
 - 2020年9月21日 完成主体架构
 - 2020年9月22日 新增whoops、qr-code
 - 2020年9月23日 新增后台、删除ThinkPHP-auth、新增Auth库、修改核心
+- 2020年9月23日 新增用户组管理、ajax提交、validate验证规则
 
 ## 协议说明
 
