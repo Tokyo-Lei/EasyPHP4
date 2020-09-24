@@ -56,8 +56,8 @@ class UserController extends CommonController{
       $UserValidate =new UserValidate();
 
       if (!$UserValidate->check($post_data)) {
-         $result['msg'] = $UserValidate->getError();
-         echo json_encode($result,JSON_UNESCAPED_UNICODE);
+         $result= $UserValidate->getError();
+         echo $result;
          exit;
       }
 

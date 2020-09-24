@@ -1,19 +1,25 @@
 {{ include('/include/head.html') }}
 
+<style>
 
+  p{
+    margin-bottom:0px;
+  }
+</style>
 
 <div class="container">
 
   
-  <div class="alert alert-dismissible alert-success mt-5">
+  <div class="alert alert-dismissible alert-success mt-5"  id="success" hidden>
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+    <p></p>
   </div>
 
-  <div class="alert alert-dismissible alert-danger">
+  <div class="alert alert-dismissible alert-danger mt-5 hide" id="error" hidden>
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+    <p></p>
   </div>
+
 <div class="row  mt-5 mb-5">
     <div class="col-lg-12">
       <div class="page-header">
@@ -35,7 +41,7 @@
             <option value="2">禁用</option>
           </select>
         </div>
-      <button type="submit" class="btn btn-danger mt-3" id="submit">提交</button>
+      <button type="button" class="btn btn-danger mt-3" id="submit">提交</button>
     </fieldset>
   </form>
   
@@ -46,13 +52,23 @@
 
   <script>
     // alert($('#formdata').serialize());
+
+    
+
     $(function(){  
+       
+         'use strict';
          
           $("#submit").click(function(){
-
+             
             Exe();
 
           });
+
+     
+
+    
+
     function Exe(){  
         $.ajax({
               //提交数据的类型 POST GET
@@ -67,12 +83,13 @@
               // beforeSend:function(){$("#msg").html("logining");},
               //成功返回之后调用的函数             
               success:function(data){
-                 alert(data);            
+                   $("#error").fadeIn().removeAttr("hidden");
+                   $('#error>p').text(data);     
               },
-      
               //调用出错执行的函数
               error: function(){
                   alert("请求异常");
+                  exit();
               }         
           });
     }
