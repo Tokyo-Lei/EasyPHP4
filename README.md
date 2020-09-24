@@ -1,20 +1,32 @@
 # EasyPHP4
 
 
+<p align="center">
+   ![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/Public/Home/img/logo.png)
+</p>
+<p align="center">
+  这是设计师开发的框架，你相信么？
+</p>
 
-![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/Public/Home/img/logo.png)
-
-
-EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！多层模型（M）、视图（V）、控制器（C）的设计模式。即将孵生针对各个应用场景，比如：用户中心、博客、文章CMS等。
-
+<p align="center">
 [![](https://img.shields.io/badge/version-4.0.0-green.svg)](https://img.shields.io/badge/version-4.0.0-green.svg)
 [![](https://img.shields.io/badge/php-7+-brightgreen.svg)](https://img.shields.io/badge/php-7+-brightgreen.svg)
 [![](https://img.shields.io/badge/mysql-5+-orange.svg)](https://img.shields.io/badge/mysql-5+-orange.svg)
 [![](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://img.shields.io/badge/license-Apache%202-blue.svg)
+</p>
 
 
 
-## 运行环境
+## 简介
+
+
+EasyPHP Framework 4 是为快速开发而生框架,基于composer开发的第四代PHP MVC框架！多层模型（M）、视图（V）、控制器（C）的设计模式。即将孵生针对各个应用场景，比如：用户中心、博客、文章CMS等。
+
+
+
+
+
+## 安装环境
 
 
 - PHP：7.0 以上
@@ -22,6 +34,10 @@ EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！多层模
 - PSR标准：PSR-4
 - 后台风格基于bootswatch litera
 
+
+## 开源协议
+
+MIT许可
 
 
 ## 更新日志
@@ -56,7 +72,7 @@ vendor
    | -
 ```
 
-## 第三方类库
+## 引入组件
 
 - Twig      模板引擎
 - medoo     数据库框架
