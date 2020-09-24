@@ -5,8 +5,7 @@
 ![Image text](https://raw.githubusercontent.com/Tokyo-Lei/EasyPHP4/master/Public/Home/img/logo.png)
 
 
-
-EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！经过多年打磨积累经验，此框架已经成熟。会孵生对各个应用场景，比如：用户中心、博客、文章CMS等。
+EasyPHP Framework 4 是基于composer开发的第四代PHP MVC框架！多层模型（M）、视图（V）、控制器（C）的设计模式。今后浮生孵生对各个应用场景，比如：用户中心、博客、文章CMS等。
 
 [![](https://img.shields.io/badge/version-4.0.0-green.svg)](https://img.shields.io/badge/version-4.0.0-green.svg)
 [![](https://img.shields.io/badge/php-7+-brightgreen.svg)](https://img.shields.io/badge/php-7+-brightgreen.svg)
