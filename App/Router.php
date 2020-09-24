@@ -44,7 +44,7 @@ Route::error(function() {
 Route::get('/admin\/', 'App\admin\controller\index\IndexController@index');
 Route::get('/admin/user_group', 'App\admin\controller\user\UserController@user_group');
 Route::get('/admin/user_group_add', 'App\admin\controller\user\UserController@user_group_add');
-Route::post('/admin/user_group_post', 'App\admin\controller\user\UserController@user_group_post');
+Route::post('/admin/user_group_post', 'App\admin\controller\user\UserController@user_group_insert');
 
 
 

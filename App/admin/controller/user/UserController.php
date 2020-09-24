@@ -4,6 +4,9 @@ namespace App\admin\Controller\user;
 use App\admin\controller\CommonController;
 use App\Bootstrap;
 use App\admin\model\UserModel;
+use App\admin\controller\user\UserValidate;
+
+
 
 class UserController extends CommonController{
 
@@ -17,40 +20,53 @@ class UserController extends CommonController{
    public function user_group(){
 
 
-      new UserModel();
-
-      $user = UserModel::select($this->_medoo_config(),'think_auth_group','*');
       
+      // $user = UserModel::select($this->_medoo_config(),'think_auth_group','*');
 
+      $user = UserModel::select_auth_group($this->medoo_conf());
+      
       echo $this->render('user/user_group.html',[
          'user' => $user,
          'PUBLIC_ADMIN' => PUBLIC_ADMIN
       ]);
    }
+
+
      // 新增管理角色组页面
    public function user_group_add(){
 
-      $user = UserModel::select($this->_medoo_config(),'think_auth_group','*');
-      
       echo $this->render('user/user_group_add.html',[
-         'user' => $user,
          'PUBLIC_ADMIN' => PUBLIC_ADMIN
       ]);
    }
+
+
 
     // 注入管理角色组页面
    public function user_group_insert(){
 
 
-      print_r($_POST);
 
-      exit;
+      // $post_data = $_POST;
+      // $result['msg'] = '吃屎！';
+      // echo json_encode($result,JSON_UNESCAPED_UNICODE);
 
-      $user = UserModel::insert($this->_medoo_config(),'think_auth_group',[
 
-         
-      ]);
-      
+
+      $post_data = $_POST;
+
+      $UserValidate =new UserValidate();
+
+      if (!$UserValidate->check($post_data)) {
+         $result['msg'] = $UserValidate->getError();
+         echo json_encode($result,JSON_UNESCAPED_UNICODE);
+         exit;
+      }
+
+     
+      $user = UserModel::insert_auth_group($this->medoo_conf(),$_POST);
+   
+      echo $user->rowCount();
    
    }
 

@@ -15,7 +15,7 @@ class Login {
 
         $_code = Bootstrap::_Medoo();
      
-        $_auth_config =Bootstrap::_Auth();
+        // $_auth_config =Bootstrap::_Auth();
 
 
         $user = user::user_select($_code,'user','*');

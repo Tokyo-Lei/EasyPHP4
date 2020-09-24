@@ -4,9 +4,10 @@ namespace App\admin\controller;
 use App\Bootstrap;
 
 
-class  CommonController{
+class  CommonController{ 
     protected $templateEngine;
     protected $_medoo_mysql;
+
 
     public function __construct(){
 
@@ -29,8 +30,8 @@ class  CommonController{
     }
 
 
-    public function _medoo_config() {
-        return $this-> _medoo_mysql = Bootstrap::_Medoo();
+    public function medoo_conf() {
+        return $this-> medoo_conf = Bootstrap::_Medoo();
     }
 
 

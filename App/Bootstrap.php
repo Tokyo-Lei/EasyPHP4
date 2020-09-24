@@ -35,9 +35,9 @@ class Bootstrap{
          $whoops->register();
 
         
-         //config 对应加载目录
-          define('PHP_CONFIG_AUTO_PATH',APP_PATH.'config/');
-          define('PHP_CONFIG_PATH',APP_PATH.'config/');
+        //config 对应加载目录
+        define('PHP_CONFIG_AUTO_PATH',APP_PATH.'config/');
+        define('PHP_CONFIG_PATH',APP_PATH.'config/');
 
         
       
@@ -84,11 +84,11 @@ class Bootstrap{
      }
          
      
-     public static function _Auth(){
-        //加载auth数据
-       $_auth_path = require  APP_PATH .'Config/Auth.php'; 
-       return $_auth_path;
-    }
+    //  public static function _Auth(){
+    //     //加载auth数据
+    //    $_auth_path = require  APP_PATH .'Config/Auth.php'; 
+    //    return $_auth_path;
+    // }
 
 }
 
