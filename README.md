@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/version-4.0.0-green.svg)](https://img.shields.io/badge/version-4.0.0-green.svg">
-<img src="https://img.shields.io/badge/php-7+-brightgreen.svg)](https://img.shields.io/badge/php-7+-brightgreen.svg">
-<img src="https://img.shields.io/badge/mysql-5+-orange.svg)](https://img.shields.io/badge/mysql-5+-orange.svg">
-<img src="https://img.shields.io/badge/license-Apache%202-blue.svg)](https://img.shields.io/badge/license-Apache%202-blue.svg">
+<img src="https://img.shields.io/badge/version-4.0.0-green.svg">
+<img src="https://img.shields.io/badge/php-7+-brightgreen.svg">
+<img src="https://img.shields.io/badge/mysql-5+-orange.svg">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg">
 </p>
 
 
