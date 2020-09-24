@@ -1,10 +1,7 @@
 <?php
-namespace App\Lib\Auth;
-use App\Core;
-use think\Db;
-use think\facade\Config;
-use think\facade\Session;
-use think\facade\Request;
+namespace App\Lib;
+use App\Bootstrap;
+
 /**
  * download save to :  \your_thinkphp_project\thinkphp\library\think\
  * think5.1.* Auth权限认证类
@@ -52,7 +49,7 @@ class Auth
     ];
     public function __construct()
     {
-        $auth = Core::Auth_Config();
+        $auth = Bootstrap::Auth_Config();
         if (!empty($auth)) {
             $this->_config = array_merge($this->_config, $auth);
         }

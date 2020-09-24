@@ -2,7 +2,7 @@
 
 namespace App\admin\Controller\index;
 use App\admin\controller\CommonController;
-use App\Core;
+use App\Bootstrap;
 
 
 class IndexController extends CommonController{

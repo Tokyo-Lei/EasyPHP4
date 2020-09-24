@@ -47,7 +47,7 @@ App
          |- templates
          |- member 
    |- config
-   |-	Core.php 
+   |-	Bootstrap.php 
    |- Router.php
 Public
    | - index.php 

@@ -4,16 +4,12 @@ namespace App;
 use Medoo\Medoo;
 
 
-class Core{
+class Bootstrap{
 
    
 
 
-    private static $app;
-
-
-
-
+  private static $app;
 
 
 
@@ -23,8 +19,6 @@ class Core{
         if (version_compare(phpversion(), '7.0', '<')) {
             die('<h1>No! :(</h1><p>为了兼容更好使用，必须在PHP7.0以上版本开发！</p>');
         }
-
-
 
 
         //  App根目录
@@ -51,7 +45,7 @@ class Core{
 
 
 
-   public static function Auth_Config($key = null) {
+   public function Auth_Config($key = null) {
 
     if (self::$app == null) {
         self::$app = require APP_PATH . 'config/Auth.php';
@@ -66,7 +60,7 @@ class Core{
 
 
 
-    public function Run(){
+    public static function Run(){
         $baseUrl='';
         $baseDir=str_replace(basename($_SERVER['SCRIPT_NAME']), '',$_SERVER['SCRIPT_NAME']);
         $baseUrl='http://' . $_SERVER['HTTP_HOST'] . $baseDir;
@@ -74,7 +68,6 @@ class Core{
         define('PUBLIC_ADMIN', BASE_URL.'Admin');
         define('PUBLIC_HOME', BASE_URL.'Home');
     
-        
         
         //加载路由
         require  APP_PATH .'Router.php';

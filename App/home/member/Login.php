@@ -4,7 +4,7 @@
 namespace App\home\member;
 
 use App\home\model\User;
-use App\Core;
+use App\Bootstrap;
 
 
 class Login {
@@ -13,9 +13,9 @@ class Login {
 
         
 
-        $_code = Core::_Medoo();
+        $_code = Bootstrap::_Medoo();
      
-        $_auth_config =Core::_Auth();
+        $_auth_config =Bootstrap::_Auth();
 
 
         $user = user::user_select($_code,'user','*');

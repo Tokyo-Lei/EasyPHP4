@@ -1,10 +1,9 @@
 <?php
 
-use App\Core;
+use App\Bootstrap;
 
 require  __DIR__ .'../../vendor/autoload.php';
 
-$main = new Core();
-$main -> Run();
-
+$Bootstrap = new Bootstrap();
+$Bootstrap -> Run();
 

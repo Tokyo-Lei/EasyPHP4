@@ -2,7 +2,7 @@
 
 namespace App\admin\Controller\user;
 use App\admin\controller\CommonController;
-use App\Core;
+use App\Bootstrap;
 use App\admin\model\UserModel;
 
 class UserController extends CommonController{

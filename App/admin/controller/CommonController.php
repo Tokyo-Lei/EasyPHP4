@@ -1,7 +1,7 @@
 <?php
 
 namespace App\admin\controller;
-use App\Core;
+use App\Bootstrap;
 
 
 class  CommonController{
@@ -14,7 +14,7 @@ class  CommonController{
         $loader = new \Twig\Loader\FilesystemLoader(APP_PATH.'admin/view');
         $this->templateEngine = new \Twig\Environment($loader,[
             'debug'=>true,
-            'cache' => APP_PATH.'./admin/cache',
+            'cache' => APP_PATH.'./file/cache_admin',
             'auto_reload' => true,  //根据文件更新时间，自动更新缓存
         ]);
         $this->templateEngine->addFilter(new \Twig\TwigFilter('url', function ($path){
@@ -30,7 +30,7 @@ class  CommonController{
 
 
     public function _medoo_config() {
-        return $this-> _medoo_mysql = Core::_Medoo();
+        return $this-> _medoo_mysql = Bootstrap::_Medoo();
     }
 
 
