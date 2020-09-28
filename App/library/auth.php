@@ -49,7 +49,10 @@ class Auth
     ];
     public function __construct()
     {
-        $auth = Bootstrap::Auth_Config();
+
+        $Bootstrap = new Bootstrap();
+        $auth = $Bootstrap->Auth_Config();    
+
         if (!empty($auth)) {
             $this->_config = array_merge($this->_config, $auth);
         }

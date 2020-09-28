@@ -5,8 +5,7 @@ use App\admin\controller\CommonController;
 use App\Bootstrap;
 use App\admin\model\UserModel;
 use App\admin\controller\user\UserValidate;
-
-
+use App\Lib\Auth;
 
 class UserController extends CommonController{
 
@@ -33,6 +32,10 @@ class UserController extends CommonController{
      // 新增管理角色组页面
    public function user_group_add(){
 
+     $_auth = new Auth();
+     print_r($_auth);
+
+
       echo $this->render('user/user_group_add.html',[
          'PUBLIC_ADMIN' => PUBLIC_ADMIN
       ]);
@@ -49,6 +52,9 @@ class UserController extends CommonController{
       // $result['msg'] = '吃屎！';
       // echo json_encode($result,JSON_UNESCAPED_UNICODE);
 
+
+
+     
 
 
       $post_data = $_POST;

@@ -20,7 +20,7 @@ class Bootstrap{
             die('<h1>No! :(</h1><p>为了兼容更好使用，必须在PHP7.0以上版本开发！</p>');
         }
 
-
+       
         //  App根目录
         define('APP_PATH',str_replace('\\','/',realpath(dirname(__FILE__).'/'))."/");
         // 根目录
@@ -40,7 +40,7 @@ class Bootstrap{
         define('PHP_CONFIG_PATH',APP_PATH.'config/');
 
         
-      
+       
    }
 
 
