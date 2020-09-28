@@ -3,3 +3,22 @@
       -moz-border-radius: 0 !important;
       border-radius: 0 !important;
 }
+
+
+.login{
+   
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+}
+
+
+.login > form{
+      width: 20.25rem;
+}
+
+.pointer{
+
+      cursor: pointer;
+}

@@ -42,6 +42,14 @@ Route::error(function() {
 
 // admin
 Route::get('/admin\/', 'App\admin\controller\index\IndexController@index');
+// 后台登录
+Route::get('/admin/login', 'App\admin\controller\user\UserController@login');
+// 验证码
+Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha');
+// 登录验证
+Route::post('/admin/login_post', 'App\admin\controller\user\UserController@login_post');
+
+
 Route::get('/admin/user_group', 'App\admin\controller\user\UserController@user_group');
 Route::get('/admin/user_group_add', 'App\admin\controller\user\UserController@user_group_add');
 Route::post('/admin/user_group_post', 'App\admin\controller\user\UserController@user_group_insert');

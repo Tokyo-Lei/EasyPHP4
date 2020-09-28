@@ -15,7 +15,10 @@
         "psr-4": {
             "App\\": "App"
         },
-        "files":["App/library/auth.php"]
+        "files":[
+            "App/library/auth.php",
+            "App/library/Validatecode.php"
+        ]
          
    }
 }
