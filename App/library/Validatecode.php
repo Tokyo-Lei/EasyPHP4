@@ -1,19 +1,42 @@
 <?php
 
+use App\Bootstrap;
+
+ 
+
 
 class ValidateCode {
+
+
     private $charset = 'abcdefghkmnprstuvwxyzABCDEFGHKMNPRSTUVWXYZ123456789';//随机因子
     private $code;//验证码
-    private $codelen = 1;//验证码长度
-    private $width = 150;//宽度
-    private $height = 44;//高度
+    private $codelen;//验证码长度
+    private $width;//宽度
+    private $height;//高度
     private $img;//图形资源句柄
     private $font;//指定的字体
-    private $fontsize = 22;//指定字体大小
+    private $fontsize;//指定字体大小
     private $fontcolor;//指定字体颜色
+
+    // private $charset = 'abcdefghkmnprstuvwxyzABCDEFGHKMNPRSTUVWXYZ123456789';//随机因子
+    // private $code;//验证码
+    // private $codelen = 5;//验证码长度
+    // private $width = 150;//宽度
+    // private $height = 44;//高度
+    // private $img;//图形资源句柄
+    // private $font;//指定的字体
+    // private $fontsize = 22;//指定字体大小
+    // private $fontcolor;//指定字体颜色
+
+
+
     //构造方法初始化
     public function __construct() {
-        
+   
+        $this->codelen = Bootstrap::Web_Config()['code_len'];
+        $this->width = Bootstrap::Web_Config()['code_width'];
+        $this->height = Bootstrap::Web_Config()['code_height'];
+        $this->fontsize = Bootstrap::Web_Config()['code_fontsize'];
         $this->font = PUBLIC_PATH.'/font/gotham-book.otf';//注意字体路径要写对，否则显示不了图片
     }
     //生成随机码

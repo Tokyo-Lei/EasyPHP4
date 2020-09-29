@@ -5,7 +5,7 @@ use App\admin\controller\CommonController;
 use App\Bootstrap;
 use App\admin\model\UserModel;
 use App\admin\controller\user\UserValidate;
-use App\Lib\Auth;
+use App\library\Auth;
 use ValidateCode;
 
 class UserController extends CommonController{
@@ -17,8 +17,8 @@ class UserController extends CommonController{
 
    session_start();
 
-   session_destroy();
-
+  
+ 
    echo $this->render('user/login.html',[
       'PUBLIC_ADMIN' => PUBLIC_ADMIN
    ]);
@@ -36,25 +36,28 @@ class UserController extends CommonController{
 
    $_SESSION['session_code'] = $_vc->getCode();
 
-  
 
   }
 
 
   //登录验证
   public function login_post(){
-
+   
    session_start();
+  
+   
+   header('Content-Type:application/json; charset=utf-8'); 
 
    if($_POST["captcha"] == $_SESSION['session_code']){
-        
+      
        if($_POST["username"] == 'admin' or $_POST["password"] == 'admin'){
-         
+        
          $result = [
             'status' => 1,
             'msg' => '登录成功!'
          ];
          echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        
          exit;
        }else{
 
@@ -62,6 +65,7 @@ class UserController extends CommonController{
             'status' => 2,
             'msg' => '您输入的登录用户名和密码不正确！'
          ];
+         echo json_encode($result,JSON_UNESCAPED_UNICODE);
          session_unset();
          exit;
        }
@@ -72,6 +76,7 @@ class UserController extends CommonController{
          'status' => 3,
          'msg' => '您输入的验证码不正确！'
       ];
+      echo json_encode($result,JSON_UNESCAPED_UNICODE);
       session_unset();
       exit;
    }
@@ -79,6 +84,15 @@ class UserController extends CommonController{
    
   }
 
+
+
+  public function api(){
+   $result = [
+      'status' => 1,
+      'msg' => '登录成功!'
+   ];
+   echo json_encode($result,JSON_UNESCAPED_UNICODE);
+  }
 
 
    // 管理角色组页面

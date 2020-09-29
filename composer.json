@@ -16,7 +16,7 @@
             "App\\": "App"
         },
         "files":[
-            "App/library/auth.php",
+            "App/library/Auth.php",
             "App/library/Validatecode.php"
         ]
          

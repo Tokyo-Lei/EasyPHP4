@@ -5,6 +5,8 @@
 }
 
 
+
+
 .login{
    
       display: flex;
@@ -21,4 +23,11 @@
 .pointer{
 
       cursor: pointer;
+}
+
+#error  p{
+      margin-bottom:0px;
+}
+.alert-dismissible .close{
+      padding: 0.45rem 1rem;
 }

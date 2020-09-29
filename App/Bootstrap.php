@@ -44,8 +44,8 @@ class Bootstrap{
    }
 
 
-
-   public function Auth_Config($key = null) {
+   // 获取认证配置
+   public static function Auth_Config($key = null) {
 
     if (self::$app == null) {
         self::$app = require APP_PATH . 'config/Auth.php';
@@ -56,9 +56,21 @@ class Bootstrap{
     }
 
     return self::$app;
-}
+    }
 
+   //获取站点配置
+   public static function Web_Config($key = null) {
 
+    if (self::$app == null) {
+        self::$app = require APP_PATH . 'config/Webconfig.php';
+    }
+
+    if (!is_null($key)) {
+        return array_key_exists($key, self::$app) ? self::$app[$key] : null;
+    }
+
+    return self::$app;
+    }
 
     public static function Run(){
         $baseUrl='';

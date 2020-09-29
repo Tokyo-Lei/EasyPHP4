@@ -46,7 +46,7 @@
     
 
 
-    <script src="{{ PUBLIC_ADMIN }}/js/jquery.min.js"></script>
+    {{ include('include/js.html') }}
 
 
       <script>
@@ -67,14 +67,13 @@
                   //提交数据的类型 POST GET
                   type:"POST",
                   //提交的网址
-                  url:"/admin/login_post",
+                  url:"http://127.0.0.1/admin/login_post",
                   //提交的数据
                   data:$('#formdata').serialize(),
-
-                //  async: false,
-
-                  //返回数据的格式
-                  datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                  // contentType: 'application/json; charset=utf-8',
+                  dataType: 'json',   // dataType: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                  cache: false,
+                  processData: false,
                   //在请求之前调用的函数
                   // beforeSend:function(){$("#msg").html("logining");},
                   //成功返回之后调用的函数             
@@ -90,31 +89,37 @@
                     // }else{
                     //     msg  = eval("("+result+")");
                     // }
-                  console.log(typeof result);
+            
+                  // console.log(typeof result);
+                   console.log(typeof result);
 
-
-
-                        // if(msg.status == '1'){
-                        //     $(location).attr('href', 'http://127.0.0.1/admin/');
-                        // };
-                        // if(msg.status == '2'){
-                        //     $('#error>p').text(msg.msg);  
-                        // };
-                        // if(msg.status == '3'){
-                        //     $('#error>p').text(msg.msg);  
-                        // };
-                      
+                        if(result.status == '1'){
+                            $(location).attr('href', 'http://127.0.0.1/admin/');
+                        };
+                        if(result.status == '2'){
+                            $("#error").fadeIn().removeAttr("hidden");
+                            $('#error>p').text(result.msg);  
+                        };
+                        if(result.status == '3'){
+                            $("#error").fadeIn().removeAttr("hidden");
+                            $('#error>p').text(result.msg);  
+                        };
 
                   },
                   //调用出错执行的函数
-                  error: function(){
-                      alert("请求异常");
-                      exit();
+                  error: function(e){
+                       alert("请求异常");
+                      alert(e.statusText);
+                      //console.log(e);
                   }         
               });
         }
         });
       
+
+
+
+
         </script>
 
       

@@ -49,6 +49,12 @@ Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha')
 // 登录验证
 Route::post('/admin/login_post', 'App\admin\controller\user\UserController@login_post');
 
+// 登录验证
+Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha');
+
+
+Route::get('/admin/api', 'App\admin\controller\user\UserController@api');
+
 
 Route::get('/admin/user_group', 'App\admin\controller\user\UserController@user_group');
 Route::get('/admin/user_group_add', 'App\admin\controller\user\UserController@user_group_add');
