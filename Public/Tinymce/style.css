@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-/* 统一引用样式 兼容bbs引用 */
-.card.card-thread blockquote,
-.card.card-postlist blockquote:not(.blockquote),
-.mce-content-body blockquote:not(.blockquote) {
-    border-left: 2px solid #ccc;
-    margin-left: 1.5rem;
-    padding-left: 1rem;
-}
 
 /* 编辑器内容-默认字体 */
 .mce-content-body {

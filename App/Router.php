@@ -55,7 +55,8 @@ Route::post('/admin/login_post', 'App\admin\controller\user\UserController@login
 
 //提交文章（快速撰写）
 Route::get('/admin/article', 'App\admin\controller\index\ArticleController@index');
-
+//上传图片
+Route::post('/admin/upload', 'App\admin\controller\index\ArticleController@upload');
 
 
 
