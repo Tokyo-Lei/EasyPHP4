@@ -5,7 +5,7 @@ use App\admin\controller\CommonController;
 use App\Bootstrap;
 use ValidateCode;
 
-class IndexController extends CommonController{
+class ArticleController extends CommonController{
 
 
    public function index(){
@@ -17,10 +17,12 @@ class IndexController extends CommonController{
       }
 
 
-      echo $this->render('index/index.html',[
+      echo $this->render('article/index.html',[
          'PUBLIC_ADMIN' => PUBLIC_ADMIN,
-         'SESSION_WEB' => $_SESSION['session_code']
+         'SESSION_WEB' => $_SESSION['session_code'],
+         'APP_PATH' => APP_PATH
       ]);
+
 
 
 

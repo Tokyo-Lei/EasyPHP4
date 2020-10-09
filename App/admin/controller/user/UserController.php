@@ -87,12 +87,13 @@ class UserController extends CommonController {
 		}
 		$user = UserModel::insert_auth_group($this->medoo_conf(),$_POST);
 		echo $user->rowCount();
-	}
+   }
+   //安全退出
 	public function login_quit() {
 		session_unset();
 		session_destroy();
-		$path_tmp = dirname($_SERVER['DOCUMENT_ROOT']).'/App/file/tmp';
-		FILE::init($path_tmp)->removeFiles();
+		// $path_tmp = dirname($_SERVER['DOCUMENT_ROOT']).'/App/file/tmp';
+		// FILE::init($path_tmp)->removeFiles();
 		header('Location:'.'/admin/login');
 		exit;
 	}

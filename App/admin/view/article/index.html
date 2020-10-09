@@ -1,0 +1,110 @@
+{{ include('/include/head.html') }}
+<div class="container">
+
+    <form class="mb-5">
+        <fieldset class="mt-5">
+          <legend>快速撰写</legend>
+        
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect1">Example select</label>
+            <select class="form-control" id="exampleSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect2">Example multiple select</label>
+            <select multiple="" class="form-control" id="exampleSelect2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="mytextarea" >撰写内容</textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          </div>
+        
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+
+ </div> 
+
+
+{{ include('include/js.html') }}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+
+
+tinymce.init({
+    selector: '#mytextarea',
+    //skin:'oxide-dark',
+    language:'zh_CN',
+    plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools textpattern help emoticons autosave bdmap indent2em autoresize lineheight formatpainter axupimgs',
+    toolbar: 'code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
+    styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
+    table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',
+    height: 650, //编辑器高度
+    min_height: 600,
+    /*content_css: [ //可设置编辑区内容展示的css，谨慎使用
+        '/static/reset.css',
+        '/static/ax.css',
+        '/static/css.css',
+    ],*/
+    fontsize_formats: '12px 14px 16px 18px 24px 36px 48px 56px 72px',
+    font_formats: '微软雅黑=Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;苹果苹方=PingFang SC,Microsoft YaHei,sans-serif;宋体=simsun,serif;仿宋体=FangSong,serif;黑体=SimHei,sans-serif;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;',
+    link_list: [
+        { title: '预置链接1', value: 'http://www.tinymce.com' },
+        { title: '预置链接2', value: 'http://tinymce.ax-z.cn' }
+    ],
+    image_list: [
+        { title: '预置图片1', value: 'https://www.tiny.cloud/images/glyph-tinymce@2x.png' },
+        { title: '预置图片2', value: 'https://www.baidu.com/img/bd_logo1.png' }
+    ],
+    image_class_list: [
+    { title: 'None', value: '' },
+    { title: 'Some class', value: 'class-name' }
+    ],
+
+    //指定上传图片的预设处理程序的URL。
+    images_upload_url: '/admin/upload',
+    //给返回的相对路径指定它所相对的基本路径。
+    images_upload_base_path: '/admin/article',
+
+    importcss_append: true,
+    //自定义文件选择器的回调内容
+    file_picker_callback: function (callback, value, meta) {
+        if (meta.filetype === 'file') {
+          callback('https://www.baidu.com/img/bd_logo1.png', { text: 'My text' });
+        }
+        if (meta.filetype === 'image') {
+          callback('https://www.baidu.com/img/bd_logo1.png', { alt: 'My alt text' });
+        }
+        if (meta.filetype === 'media') {
+          callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.baidu.com/img/bd_logo1.png' });
+        }
+    },
+    autosave_ask_before_unload: false,
+});
+  </script>
+{{ include('include/footer.html') }}

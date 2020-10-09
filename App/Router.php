@@ -40,7 +40,7 @@ Route::error(function() {
 
 
 
-// admin
+// 后台首页
 Route::get('/admin\/', 'App\admin\controller\index\IndexController@index');
 // 后台登录
 Route::get('/admin/login', 'App\admin\controller\user\UserController@login');
@@ -48,16 +48,21 @@ Route::get('/admin/login', 'App\admin\controller\user\UserController@login');
 Route::get('/admin/quit', 'App\admin\controller\user\UserController@login_quit');
 // 验证码
 Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha');
-// 登录验证
+// 登录POST验证
 Route::post('/admin/login_post', 'App\admin\controller\user\UserController@login_post');
 
-// 登录验证
-Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha');
+
+
+//提交文章（快速撰写）
+Route::get('/admin/article', 'App\admin\controller\index\ArticleController@index');
+
+
+
 
 
 Route::get('/admin/api', 'App\admin\controller\user\UserController@api');
 
-
+//注入AUTH用户组
 Route::get('/admin/user_group', 'App\admin\controller\user\UserController@user_group');
 Route::get('/admin/user_group_add', 'App\admin\controller\user\UserController@user_group_add');
 Route::post('/admin/user_group_post', 'App\admin\controller\user\UserController@user_group_insert');
