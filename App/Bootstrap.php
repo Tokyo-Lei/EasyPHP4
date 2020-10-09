@@ -81,7 +81,7 @@ class Bootstrap{
         define('BASE_URL', $baseUrl);
         define('PUBLIC_ADMIN', BASE_URL.'Admin');
         define('PUBLIC_HOME', BASE_URL.'Home');
-    
+        define('PUBLIC_ROOT', BASE_URL);
         
         //加载路由
         require  APP_PATH .'Router.php';

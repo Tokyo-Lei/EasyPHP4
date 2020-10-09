@@ -19,8 +19,8 @@ class ArticleController extends CommonController{
 
       echo $this->render('article/index.html',[
          'PUBLIC_ADMIN' => PUBLIC_ADMIN,
-         'SESSION_WEB' => $_SESSION['session_code'],
-         'APP_PATH' => APP_PATH
+         'PUBLIC_ROOT' => PUBLIC_ROOT,
+         'SESSION_WEB' => $_SESSION['session_code']
       ]);
 
 
