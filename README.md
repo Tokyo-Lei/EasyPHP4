@@ -47,6 +47,7 @@ MIT许可
 - 2020年9月22日 新增whoops、qr-code
 - 2020年9月23日 新增后台、删除ThinkPHP-auth、新增Auth库、修改核心
 - 2020年9月24日 新增用户组管理、ajax提交、validate验证规则
+- 2020年10月09日 修正验证码、后台简单的session验证、增加上传类、Tinymce5编辑器
 
 ## 协议说明
 
