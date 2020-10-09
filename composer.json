@@ -17,7 +17,8 @@
         },
         "files":[
             "App/library/Auth.php",
-            "App/library/Validatecode.php"
+            "App/library/Validatecode.php",
+            "App/library/File.class.php"
         ]
          
    }

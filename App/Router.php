@@ -44,6 +44,8 @@ Route::error(function() {
 Route::get('/admin\/', 'App\admin\controller\index\IndexController@index');
 // 后台登录
 Route::get('/admin/login', 'App\admin\controller\user\UserController@login');
+// 后台退出
+Route::get('/admin/quit', 'App\admin\controller\user\UserController@login_quit');
 // 验证码
 Route::get('/admin/captcha', 'App\admin\controller\user\UserController@captcha');
 // 登录验证

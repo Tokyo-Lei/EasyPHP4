@@ -10,8 +10,14 @@ class  CommonController{
 
 
     public function __construct(){
-
         
+        ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/App/file/tmp'));
+        ini_set('session.auto_start',0); 
+        ini_set('session.gc_probability', 1);
+        ini_set('session.gc_maxlifetime',1500); 
+        
+        session_start();
+
         $loader = new \Twig\Loader\FilesystemLoader(APP_PATH.'admin/view');
         $this->templateEngine = new \Twig\Environment($loader,[
             'debug'=>true,
@@ -21,6 +27,9 @@ class  CommonController{
         $this->templateEngine->addFilter(new \Twig\TwigFilter('url', function ($path){
             return BASE_URL . $path;
         }));
+
+    
+
 
 
     }

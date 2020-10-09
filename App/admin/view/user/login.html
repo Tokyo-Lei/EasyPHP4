@@ -37,7 +37,7 @@
 
            
               <button type="button" class="btn btn-primary" id="submit">登录</button>
-              <button type="reset" class="btn btn-info">重置</button>
+              <button type="button" class="btn btn-info" onclick="location.replace(location.href)">重置</button>
           </form>
     
 
@@ -67,7 +67,7 @@
                   //提交数据的类型 POST GET
                   type:"POST",
                   //提交的网址
-                  url:"http://127.0.0.1/admin/login_post",
+                  url:"/admin/login_post",
                   //提交的数据
                   data:$('#formdata').serialize(),
                   // contentType: 'application/json; charset=utf-8',
@@ -91,7 +91,7 @@
                     // }
             
                   // console.log(typeof result);
-                   console.log(typeof result);
+                   console.log(result);
 
                         if(result.status == '1'){
                             $(location).attr('href', 'http://127.0.0.1/admin/');

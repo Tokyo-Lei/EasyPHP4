@@ -40,6 +40,8 @@ class Bootstrap{
         define('PHP_CONFIG_PATH',APP_PATH.'config/');
 
         
+ 
+
        
    }
 
