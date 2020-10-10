@@ -1,0 +1,167 @@
+{{ include('/include/head.html') }}
+<div class="container">
+
+    <form class="mt-5" method="POST" action="/admin/config_update">
+
+
+
+      <h3>站点设置</h3>
+
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">站点标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_title']}}" name="web_title">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">站点关键词</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_key']}}" name="web_key">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">站点描述</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_des']}}" name="web_des">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">站点地址</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_add']}}" name="web_add">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">版权信息</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_copyright']}}" name="web_copyright">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">电子邮箱</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['web_email']}}" name="web_email">
+        </div>
+      </div>
+
+      <hr>
+
+
+      <h3>数据库配置</h3>
+
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">数据库类型</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['database_type']}}" name="database_type">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">数据库名称</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['database_name']}}" name="database_name">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">数据库地址</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['server']}}" name="server">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">数据库账号</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['username']}}" name="username">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">数据库密码</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['password']}}" name="password">
+        </div>
+      </div>
+
+
+      <hr>
+
+
+
+
+      <h3>缓存配置</h3>
+
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">调试模式</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{% if Web_Config['debug'] == 'true' %}true{% else %} false {% endif %}" name="debug">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">缓存地址</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{Web_Config['cache']}}" name="cache">
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <label class="col-sm-2 col-form-label">自动更新缓存</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{% if Web_Config['auto_reload'] == 'true' %}true{% else %} false {% endif %}" name="auto_reload">
+        </div>
+      </div>
+  
+
+
+
+
+
+      <hr>
+
+
+
+
+
+
+      <h3>验证码设置</h3>
+
+        <div class="form-group row mt-4">
+          <label class="col-sm-2 col-form-label">验证码随机分子</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" value="{{Web_Config['code_charset']}}" name="code_charset">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">验证码长度</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" value="{{Web_Config['code_len']}}" name="code_len">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">验证码宽度</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" value="{{Web_Config['code_width']}}" name="code_width">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">验证码高度</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" value="{{Web_Config['code_height']}}" name="code_height">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">验证码字体大小</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" value="{{Web_Config['code_fontsize']}}" name="code_fontsize">
+          </div>
+        </div>
+
+
+       
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">保存修改</button>
+          </div>
+        </div>
+      </form>
+
+ </div> 
+
+{{ include('include/js.html') }}
+{{ include('include/footer.html') }}

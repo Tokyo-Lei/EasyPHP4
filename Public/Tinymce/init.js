@@ -12,7 +12,7 @@ tinymce.init({
       draggable_modal: true, // 模态框允许拖动（主要针对后续插件应用）
       image_uploadtab: false, // 不展示默认的上传标签，用xiunoimgup就可以，支持多文件/单文件上传。
       plugins: ['advlist', 'anchor', 'autolink', 'autoresize', 'charmap', 'code', 'codesample', '-directionality', 'fullscreen', 'help', 'hr', 'image', '-insertdatetime', 'link', 'lists', 'media', 'paste', 'preview', 'quickbars', 'table', 'textpattern', 'toc', '-visualblocks', '-visualchars',  'wordcount'], // 加载的插件，-为禁用
-      toolbar: ['fontformats code | undo redo | styleselect | formatting fontcolor removeformat | alignment blockquote indentation list | imgup link media codesample table | anchor hr toc preview | other | fullscreen | customInsertButton | customInser2tButton | image_upload'], // 界面按钮
+      toolbar: ['fontformats code | undo redo | styleselect | formatting fontcolor removeformat | alignment blockquote indentation list | imgup link media codesample table | anchor hr toc preview | other | fullscreen | customInsertButton | customInser2tButton '], // 界面按钮
       toolbar_groups: { //按钮分组，节省空间，方便使用
           formatting: {
               icon: 'format',
@@ -27,7 +27,7 @@ tinymce.init({
           imgup: {
               icon: 'gallery',
               tooltip: '上传图片',
-              items: ' image'
+              items: ' image | image_upload'
           },
           list: {
               icon: 'unordered-list',
