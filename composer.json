@@ -8,7 +8,8 @@
         "bang/validate": "^1.0",
         "endroid/qr-code": "^3.9",
         "filp/whoops": "^2.7",
-        "monolog/monolog": "^2.1"
+        "monolog/monolog": "^2.1",
+        "aileshe/upload": "*"
     },
     
     "autoload":{
