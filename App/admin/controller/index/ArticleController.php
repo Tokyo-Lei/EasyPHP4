@@ -48,10 +48,10 @@ class ArticleController extends CommonController{
             }
          }
          // check valid file name
-         if(preg_match("/([^\w\s\d\-_~,;:\[\]\(\).])|([\.]{2,})/", $tmp['name'])){
-            header("HTTP/1.1 400 Invalid file name!");
-            return;
-         }
+         // if(preg_match("/([^\w\s\d\-_~,;:\[\]\(\).])|([\.]{2,})/", $tmp['name'])){
+         //    header("HTTP/1.1 400 Invalid file name!");
+         //    return;
+         // }
 
          // check and Verify extension
          if(!in_array(strtolower(pathinfo($tmp['name'], PATHINFO_EXTENSION)), array("gif", "jpg", "png", "bmp"))){
@@ -60,7 +60,7 @@ class ArticleController extends CommonController{
          }
 
          // Accept upload if there was no origin, or if it is an accepted origin
-         $filePath = $uploadFolder . $tmp['name'];
+         $filePath = $uploadFolder .time().'-'.md5($tmp['name']);
 
        
          move_uploaded_file($tmp['tmp_name'], $filePath);
