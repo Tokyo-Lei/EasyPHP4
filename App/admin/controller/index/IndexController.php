@@ -10,19 +10,15 @@ class IndexController extends CommonController{
 
    public function index(){
 
-      //判断是否为空
       if(!isset($_SESSION['session_name'])){
          header('Location:'.'/admin/login');
          exit;
       }
 
-
       echo $this->render('index/index.html',[
          'PUBLIC_ADMIN' => PUBLIC_ADMIN,
          'SESSION_WEB' => $_SESSION['session_code']
       ]);
-
-
 
    }
 

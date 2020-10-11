@@ -54,21 +54,14 @@ Route::post('/'.$admin.'/upload', 'App\admin\controller\index\ArticleController@
 
 
 //站点配置
-
 Route::get('/'.$admin.'/config', 'App\admin\controller\conn\ConfigController@index');
 //修改站点配置
 Route::post('/'.$admin.'/config_update', 'App\admin\controller\conn\ConfigController@update');
+//删除缓存
+Route::get('/'.$admin.'/cache', 'App\admin\controller\conn\ConfigController@cache');
 
 
 
-
-
-Route::get('/'.$admin.'/api', 'App\admin\controller\user\UserController@api');
-
-//注入AUTH用户组
-Route::get('/'.$admin.'/user_group', 'App\admin\controller\user\UserController@user_group');
-Route::get('/'.$admin.'/user_group_add', 'App\admin\controller\user\UserController@user_group_add');
-Route::post('/'.$admin.'/user_group_post', 'App\admin\controller\user\UserController@user_group_insert');
 
 
 

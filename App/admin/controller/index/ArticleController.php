@@ -13,10 +13,10 @@ class ArticleController extends CommonController{
 
 
       //判断是否为空
-      // if(!isset($_SESSION['session_name'])){
-      //    header('Location:'.'/admin/login');
-      //    exit;
-      // }
+      if(!isset($_SESSION['session_name'])){
+         header('Location:'.'/admin/login');
+         exit;
+      }
 
 
       echo $this->render('article/index.html',[

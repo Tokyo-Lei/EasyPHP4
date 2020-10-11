@@ -48,6 +48,8 @@ MIT许可
 - 2020年9月23日 新增后台、删除ThinkPHP-auth、新增Auth库、修改核心
 - 2020年9月24日 新增用户组管理、ajax提交、validate验证规则
 - 2020年10月09日 修正验证码、后台简单的session验证、增加上传类、Tinymce5编辑器
+- 2020年10月10日 新增后台数据配置、删除缓存、快速撰写
+- 2020年10月11日 框架主体完成
 
 ## 协议说明
 
@@ -57,21 +59,53 @@ MIT许可
 
 ## 目录结构
 ```php
-App		
-   |-	home                         //前台目录
+App
+   |- admin          //后台目录
+        |-controller //控制器
+             |-conn  //配置控制器文件夹
+             |-index //后台首页控制器文件夹
+             |-user  //用户控制器文件夹
+         |- model    //模型
+             |-UserModel.php //用户模型
+         |- view     //视图
+             |- article //文章视图文件夹
+             |- conn    //配置视图文件夹
+             |- include //页头、页脚、导航等视图文件夹
+             |- index   //后台首页视图文件夹
+             |- user    //用户登录等视图文件 夹
+   |-	home              //前台目录
          |-controller
              |-HomeController.php
          |- model
          |- templates
          |- member 
-   |- config
-   |-	Bootstrap.php 
-   |- Router.php
+   |- config  //配置文件夹
+   |- file    //缓存文件夹 
+   |- library //类库
+   |-	Bootstrap.php  //主体核心文件
+   |- Router.php     //路由
 Public
-   | - index.php 
-vendor
-   | -
+   | - index.php     //PHP启动文件
+vendor               //composer 第三方类库文件夹
+
 ```
+
+
+## 使用安装
+
+composer安装第三方库
+
+```php
+composer install
+```
+
+数据库配置
+
+数据库表easyphp
+用户名和密码分别是 `admin`
+
+
+
 
 ## 引入组件
 
@@ -81,5 +115,8 @@ vendor
 - validate  Thinkphp验证
 - whoops    错误提示
 - monolog   日志
+- qr-code   生成二维码
+- upload    上传
+- Tinymce   编辑器
 
-正在开发中...
+

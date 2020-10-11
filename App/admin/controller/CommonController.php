@@ -30,14 +30,11 @@ class  CommonController{
 
     
 
-
-
     }
 
     public function render($fileName, $data = []) {
         return $this->templateEngine->render($fileName, $data);
     }
-
 
     public function medoo_conf() {
         return $this-> medoo_conf = Bootstrap::_Medoo();
