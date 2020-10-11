@@ -94,18 +94,18 @@ vendor               //composer 第三方类库文件夹
 ## 使用安装
 
 
-直接下载源码composer安装第三方库
+- 直接下载源码composer安装第三方库
 
 ```php
 composer install
 ```
 
-数据库配置
+- 数据库配置
 
 数据库表easyphp
 用户名和密码分别是 `admin`
 
-直接composer安装
+- 直接composer安装
 
 ```php
 composer require tokyo-lei/easyphp4
