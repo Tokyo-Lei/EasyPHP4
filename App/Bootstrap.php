@@ -34,6 +34,15 @@ class Bootstrap {
         }
         return self::$app;
     }
+    public static function sql_Config($key = null) {
+        if (self::$app == null) {
+            self::$app = require APP_PATH . 'config/Mysql.php';
+        }
+        if (!is_null($key)) {
+            return array_key_exists($key, self::$app) ? self::$app[$key] : null;
+        }
+        return self::$app;
+    }
     public static function Run() {
         $baseUrl = '';
         $baseDir = str_replace(basename($_SERVER['SCRIPT_NAME']) , '', $_SERVER['SCRIPT_NAME']);
@@ -45,8 +54,7 @@ class Bootstrap {
         require APP_PATH . 'Router.php';
     }
     public static function _Medoo() {
-        require APP_PATH . 'Config/Mysql.php';
-        return $_DB = New medoo($Config['DB']);
+        $key = require APP_PATH . 'Config/Mysql.php';
+        return $_DB = New medoo($key);
     }
 }
-

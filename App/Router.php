@@ -26,7 +26,9 @@ Route::post('/'.$admin.'/login_post', 'App\admin\controller\user\UserController@
 Route::get('/'.$admin.'/article', 'App\admin\controller\index\ArticleController@index');
 Route::post('/'.$admin.'/upload', 'App\admin\controller\index\ArticleController@upload');
 Route::get('/'.$admin.'/config', 'App\admin\controller\conn\ConfigController@index');
+Route::get('/'.$admin.'/sql', 'App\admin\controller\conn\ConfigController@sql');
 Route::post('/'.$admin.'/config_update', 'App\admin\controller\conn\ConfigController@update');
+Route::post('/'.$admin.'/config_sql', 'App\admin\controller\conn\ConfigController@update_sql');
 Route::get('/'.$admin.'/cache', 'App\admin\controller\conn\ConfigController@cache');
 Route::dispatch();
 
