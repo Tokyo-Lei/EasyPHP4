@@ -74,11 +74,11 @@ App
              |- index   //后台首页视图文件夹
              |- user    //用户登录等视图文件 夹
    |-	home              //前台目录
-         |-controller
-             |-HomeController.php
-         |- model
-         |- templates
-         |- member 
+         |-controller     //前台控制器
+             |-HomeController.php    //前台控制器
+         |- model        //前台模型 
+         |- templates    //前台模板
+         |- member       //前台用户中心
    |- config  //配置文件夹
    |- file    //缓存文件夹 
    |- library //类库
