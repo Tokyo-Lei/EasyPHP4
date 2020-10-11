@@ -1,35 +1,18 @@
 <?php
 namespace App;
-
 use Medoo\Medoo;
-
-
 class Bootstrap{
-
-   
-
-
   private static $app;
-
-
 
    public function __construct()
    {
-
         if (version_compare(phpversion(), '7.0', '<')) {
             die('<h1>No! :(</h1><p>为了兼容更好使用，必须在PHP7.0以上版本开发！</p>');
         }
 
-       
-        //  App根目录
         define('APP_PATH',str_replace('\\','/',realpath(dirname(__FILE__).'/'))."/");
-        // 根目录
         define('ROOT_PATH',str_replace('\\','/',realpath(dirname(__FILE__,2).'/'))."/");
-        //PUBLIC 静态资源目录
         define('PUBLIC_PATH',ROOT_PATH.'Public');
-
-
-         //加载 PHP 错误提示
          $whoops = new \Whoops\Run;
          $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
          $whoops->register();
@@ -45,8 +28,6 @@ class Bootstrap{
        
    }
 
-
-   // 获取认证配置
    public static function Auth_Config($key = null) {
 
     if (self::$app == null) {
@@ -60,7 +41,6 @@ class Bootstrap{
     return self::$app;
     }
 
-   //获取站点配置
    public static function Web_Config($key = null) {
 
     if (self::$app == null) {
@@ -92,17 +72,10 @@ class Bootstrap{
 
      
      public static function _Medoo(){
-         //加载数据库配置
         require  APP_PATH .'Config/Mysql.php'; 
         return $_DB = New medoo($Config['DB']);
      }
-         
-     
-    //  public static function _Auth(){
-    //     //加载auth数据
-    //    $_auth_path = require  APP_PATH .'Config/Auth.php'; 
-    //    return $_auth_path;
-    // }
+
 
 }
 

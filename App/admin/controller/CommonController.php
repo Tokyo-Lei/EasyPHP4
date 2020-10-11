@@ -28,8 +28,6 @@ class  CommonController{
             return BASE_URL . $path;
         }));
 
-    
-
     }
 
     public function render($fileName, $data = []) {
