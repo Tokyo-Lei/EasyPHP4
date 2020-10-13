@@ -7,14 +7,8 @@ $admin = 'admin';
 
 Route::get('/', 'App\Home\Controller\HomeController@main');
 Route::get('/login', 'App\Home\Member\Login@index');
-Route::get('/phpinit', function() {
-   phpinfo();
-});
 Route::get('/code', 'App\Home\Controller\QrodeController@index');
 Route::get('/captcha', 'App\Home\Member\Captcha@index');
-Route::get('/about', function() {
-    echo 'about!';
-});
 Route::error(function() {
     echo '404 !';
 });

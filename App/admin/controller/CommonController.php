@@ -5,10 +5,10 @@ class CommonController {
     protected $templateEngine;
     protected $_medoo_mysql;
     public function __construct() {
-        ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/App/file/tmp'));
-        ini_set('session.auto_start', 0);
-        ini_set('session.gc_probability', 1);
-        ini_set('session.gc_maxlifetime', 1500);
+        // ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/App/file/tmp'));
+        // ini_set('session.auto_start', 0);
+        // ini_set('session.gc_probability', 1);
+        // ini_set('session.gc_maxlifetime', 1500);
         session_start();
         $loader = new \Twig\Loader\FilesystemLoader(APP_PATH . 'admin/view');
         $this->templateEngine = new \Twig\Environment($loader, ['debug' => true, 'cache' => APP_PATH . './file/cache_admin', 'auto_reload' => true, ]);

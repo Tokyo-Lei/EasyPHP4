@@ -10,11 +10,13 @@ class Bootstrap {
         define('APP_PATH', str_replace('\\', '/', realpath(dirname(__FILE__) . '/')) . "/");
         define('ROOT_PATH', str_replace('\\', '/', realpath(dirname(__FILE__, 2) . '/')) . "/");
         define('PUBLIC_PATH', ROOT_PATH . 'Public');
-        $whoops = new \Whoops\Run;
-        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-        $whoops->register();
+     
         define('PHP_CONFIG_AUTO_PATH', APP_PATH . 'config/');
         define('PHP_CONFIG_PATH', APP_PATH . 'config/');
+        // 调试模式
+        // $whoops = new \Whoops\Run;
+        // $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+        // $whoops->register();
     }
     public static function Auth_Config($key = null) {
         if (self::$app == null) {
