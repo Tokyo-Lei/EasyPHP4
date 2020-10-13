@@ -124,3 +124,7 @@ composer require tokyo-lei/easyphp4
 - Tinymce   编辑器
 
 
+## 版本更新
+
+
+4.0.1 优化部分代码
