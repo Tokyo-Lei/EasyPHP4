@@ -121,7 +121,7 @@ composer require tokyo-lei/easyphp4
 
 #### 1.0 创建简单的Hello World !
 
-**第一步：**app目录下home文件是前台模块，打开app/home/controller/文件夹创建IndexController.php文件。
+第一步：app目录下home文件是前台模块，打开app/home/controller/文件夹创建IndexController.php文件。
 
 代码如下：
 
@@ -135,7 +135,7 @@ class IndexController {
 }
 ```
 
-**第二步：**设置路由，在app/Router.php文件。
+第二步：设置路由，在app/Router.php文件。
 
 写入代码：
 
