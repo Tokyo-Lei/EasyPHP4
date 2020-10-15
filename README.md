@@ -119,7 +119,7 @@ composer require tokyo-lei/easyphp4
 
 所有PHP文件名采用驼峰法（首字母大写），文件目录都小写。
 
-#### 1.0 创建简单的Hello World !
+#### 创建简单的Hello World !
 
 第一步：app目录下home文件是前台模块，打开app/home/controller/文件夹创建IndexController.php文件。
 
