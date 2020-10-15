@@ -17,8 +17,8 @@
             "App\\": "App"
         },
         "files":[
-            "App/library/Validatecode.php",
-            "App/library/File.class.php"
+            "app/library/Validatecode.php",
+            "app/library/File.class.php"
         ]
          
    }

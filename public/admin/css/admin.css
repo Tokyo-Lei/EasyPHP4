@@ -1,0 +1,37 @@
+* {
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      border-radius: 0 !important;
+}
+
+
+
+
+.login{
+   
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+}
+
+
+.login > form{
+      width: 20.25rem;
+}
+
+.pointer{
+
+      cursor: pointer;
+}
+
+#error  p{
+      margin-bottom:0px;
+}
+.alert-dismissible .close{
+      padding: 0.45rem 1rem;
+}
+
+.w{
+      width: 100px;
+}

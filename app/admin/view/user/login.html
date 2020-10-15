@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ PUBLIC_ADMIN }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ PUBLIC_ADMIN }}/css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    
+    <div class="login mt-5">
+
+
+        <form id="formdata">
+              <h2>Admin Login</h2>
+          
+           
+              <div class="alert alert-dismissible alert-danger mt-5 hide" id="error" hidden>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p></p>
+              </div>
+
+
+
+              <div class="form-group mt-5">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+              </div>
+              <div class="form-group mb-4 clearfix">
+                <input type="text" class="form-control float-left w-50" id="captcha" name="captcha" placeholder="Code">
+                <img src="/admin/captcha" class="float-right" onclick="this.src='captcha?'+Math.random();"  style="cursor:pointer" >
+            </div>
+        
+
+           
+              <button type="button" class="btn btn-primary" id="submit">登录</button>
+              <button type="button" class="btn btn-info" onclick="location.replace(location.href)">重置</button>
+          </form>
+    
+
+
+    </div>
+    
+
+
+    {{ include('include/js.html') }}
+
+
+      <script>
+        // alert($('#formdata').serialize());
+    
+        $(function(){  
+           
+             'use strict';
+             
+              $("#submit").click(function(){
+                Login();
+              });
+    
+         
+    
+        function Login(){  
+            $.ajax({
+                  //提交数据的类型 POST GET
+                  type:"POST",
+                  //提交的网址
+                  url:"/admin/login_post",
+                  //提交的数据
+                  data:$('#formdata').serialize(),
+                  // contentType: 'application/json; charset=utf-8',
+                  dataType: 'json',   // dataType: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                  cache: false,
+                  processData: false,
+                  //在请求之前调用的函数
+                  // beforeSend:function(){$("#msg").html("logining");},
+                  //成功返回之后调用的函数             
+                  success:function(result){
+                    //    $("#error").fadeIn().removeAttr("hidden");
+                    //    $('#error>p').text(result);  
+
+                    // let msg;
+
+                    // if((typeof result=='object') && result.constructor == Object){
+                    //     msg = result;
+
+                    // }else{
+                    //     msg  = eval("("+result+")");
+                    // }
+            
+                  // console.log(typeof result);
+                   console.log(result);
+
+                        if(result.status == '1'){
+                            $(location).attr('href', 'http://127.0.0.1/admin/');
+                        };
+                        if(result.status == '2'){
+                            $("#error").fadeIn().removeAttr("hidden");
+                            $('#error>p').text(result.msg);  
+                        };
+                        if(result.status == '3'){
+                            $("#error").fadeIn().removeAttr("hidden");
+                            $('#error>p').text(result.msg);  
+                        };
+
+                  },
+                  //调用出错执行的函数
+                  error: function(e){
+                       alert("请求异常");
+                      alert(e.statusText);
+                      //console.log(e);
+                  }         
+              });
+        }
+        });
+      
+
+
+
+
+        </script>
+<div style="display: none;"><script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279338078&web_id=1279338078"></script>
+</div>
+</body>
+</html>
