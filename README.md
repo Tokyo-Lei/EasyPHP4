@@ -172,3 +172,10 @@ Route::get('/', 'App\Home\Controller\IndexController@index');
 - 2020年10月10日 新增后台数据配置、删除缓存、快速撰写
 - 2020年10月11日 框架主体完成
 - 2020年10月12日 4.0.1 优化部分代码
+
+## 多语言
+
+- 日本版 BETA  <a href="https://github.com/Tokyo-Lei/EasyPHP-JP">链接</a>
+- 英语 计划中
+- 韩语 计划中
+
