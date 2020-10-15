@@ -175,7 +175,7 @@ Route::get('/', 'App\Home\Controller\IndexController@index');
 
 ## 多语言
 
-- 日本版 BETA  <a href="https://github.com/Tokyo-Lei/EasyPHP-JP">链接</a>
-- 英语 计划中
-- 韩语 计划中
+- 日语版 BETA  <a href="https://github.com/Tokyo-Lei/EasyPHP-JP">链接</a>
+- 英语版  计划中
+- 韩语版  计划中
 
