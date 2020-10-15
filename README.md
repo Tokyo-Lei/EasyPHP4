@@ -173,9 +173,4 @@ Route::get('/', 'App\Home\Controller\IndexController@index');
 - 2020年10月11日 框架主体完成
 - 2020年10月12日 4.0.1 优化部分代码
 
-## 多语言
-
-- 日语版 BETA  <a href="https://github.com/Tokyo-Lei/EasyPHP-JP">链接</a>
-- 英语版  计划中
-- 韩语版  计划中
 
